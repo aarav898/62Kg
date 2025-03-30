@@ -1,0 +1,15 @@
+{
+"name": "Way To 62kg",
+"short_name": "62kg",
+"start_url": "./index.html",
+"display": "standalone",
+"background_color": "#121212",
+"theme_color": "#00ff7f",
+"icons": [
+{
+"src": "icon-512.png",
+"sizes": "512x512",
+"type": "image/png"
+}
+]
+}

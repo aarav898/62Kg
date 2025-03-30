@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Way To 62kg</title>
+<link rel="manifest" href="manifest.json">
+<script>
+if ('serviceWorker' in navigator) {
+navigator.serviceWorker.register('service-worker.js')
+.then(() => console.log("Service Worker Registered!"))
+.catch(error => console.log("Service Worker Failed:", error));
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+font-family: 'Poppins', sans-serif;
+text-align: center;
+margin: 0;
+padding: 0;
+background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+color: white;
+}
+h2 {
+font-size: 2.5em;
+font-weight: 600;
+margin: 20px 0;
+text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.container {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+gap: 10px;
+max-width: 800px;
+margin: auto;
+padding: 20px;
+}
+.checkbox-label {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 12px;
+background: rgba(255, 255, 255, 0.1);
+border-radius: 8px;
+cursor: pointer;
+transition: transform 0.2s, box-shadow 0.3s;
+}
+.checkbox-label:hover {
+transform: scale(1.05);
+box-shadow: 0 0 10px rgba(0, 255, 127, 0.6);
+}
+input[type="checkbox"] {
+display: none;
+}
+.checkbox-label span {
+font-size: 1.1em;
+font-weight: 400;
+}
+input[type="checkbox"]:checked + span {
+color: #00ff7f;
+font-weight: 600;
+text-shadow: 0 0 10px #00ff7f;
+}
+input[type="checkbox"]:checked + span::after {
+content: " ✔";
+}
+</style>
+</head>
+<body>
+
+<h2>Way To 62kg 🏋️‍♂️</h2>
+
+<div class="container" id="checkboxContainer"></div>
+
+<script>
+const container = document.getElementById("checkboxContainer");
+for (let i = 1; i <= 135; i++) {
+const label = document.createElement("label");
+label.className = "checkbox-label";
+label.innerHTML = `
+<input type="checkbox" id="day${i}">
+<span>Day ${i}</span>
+`;
+container.appendChild(label);
+}
+</script>
+
+</body>
+</html>
